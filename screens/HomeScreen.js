@@ -11,10 +11,14 @@ import {
 } from 'react-native';
 
 import { MonoText } from '../components/StyledText';
+import robot from '../assets/images/robot-prod.png'
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.appTitle}>🌿 plantr</Text>
+      </View>
       <ScrollView
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
@@ -42,6 +46,12 @@ export default function HomeScreen() {
           <Text style={styles.getStartedText}>
             This is plantr. I am coding in React Native with the help of Expo.
           </Text>
+
+          <Text style={styles.newText}> 
+            This is a new text component I added.
+          </Text>
+
+          <Image source={robot} />
         </View>
 
         <View style={styles.helpContainer}>
@@ -112,6 +122,22 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+  },
+  header: {
+    backgroundColor: 'black',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 100,
+    borderStyle: 'solid',
+    borderColor: 'red',
+    borderWidth: 2
+  },
+  appTitle: {
+    color: '#ffdb58',
+    fontSize: 20,
+    // borderStyle: 'solid',
+    // borderColor: 'red',
+    // borderWidth: 2
   },
   developmentModeText: {
     marginBottom: 20,
@@ -195,4 +221,8 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#2e78b7',
   },
+  newText: {
+    color: '#888', 
+    fontSize: 18
+  }
 });
