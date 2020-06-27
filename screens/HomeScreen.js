@@ -22,6 +22,19 @@ export default function HomeScreen() {
       <ScrollView
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
+        
+        <View style={styles.feed}>
+          <View style={styles.post}>
+              <Text style={styles.postTitle}>Plant 1</Text>
+              <View style={styles.postImage}>
+                <Image source={require('../assets/images/plants/zz.jpg')}></Image>
+              </View>
+          </View>
+          <View style={styles.post}>
+            <Text>Plant 2</Text>
+          </View>
+        </View>
+        
         <View style={styles.welcomeContainer}>
           <Image
             source={
@@ -127,17 +140,33 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
-    height: 100,
-    borderStyle: 'solid',
-    borderColor: 'red',
-    borderWidth: 2
+    height: 85,
+    // borderStyle: 'solid',
+    // borderColor: 'red',
+    // borderWidth: 2
   },
   appTitle: {
     color: '#ffdb58',
     fontSize: 20,
+    marginBottom: -30
     // borderStyle: 'solid',
     // borderColor: 'red',
     // borderWidth: 2
+  },
+  post: {
+    margin: 30,
+    padding: 30,
+    borderStyle: 'solid',
+    borderColor: 'grey',
+    borderWidth: 1
+  },
+  postTitle: {
+    fontSize: 20,
+    fontWeight: 'bold'
+  },
+  postImage: {
+    width:100,
+    height:100,
   },
   developmentModeText: {
     marginBottom: 20,
@@ -147,7 +176,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   contentContainer: {
-    paddingTop: 30,
+    // paddingTop: 30,
   },
   welcomeContainer: {
     alignItems: 'center',
